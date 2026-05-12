@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>سوق النعمان - nomansooq.com | للإعلانات المبوبة بكل ثقة وأمان</title>
+<meta name="description" content="سوق النعمان للإعلانات المبوبة - معنا تبيع وتشتري كل ما تحتاجه بكل سهولة وأمان. آلاف المستخدمين يثقون بنا يومياً.">
+<meta name="keywords" content="سوق النعمان, nomansooq, إعلانات مبوبة, تسوق, بيع, شراء, يمن, صنعاء, عدن">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f3f4f6; color: #1f2937; direction: rtl; }
+body, input, select, textarea, button { font-family: 'Cairo', 'Amiri', Tahoma, sans-serif; }
+
+/* Header */
+header { background: #fff; border-bottom: 2px solid #eab308; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+.header-inner { max-width: 1280px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.logo { font-family: 'Cairo', sans-serif; font-size: 26px; font-weight: 700; color: #1e3a8a; text-decoration: none; }
+.logo span { color: #eab308; }
+.logo small { display: block; font-size: 14px; color: #eab308; font-family: 'Cairo', sans-serif; letter-spacing: 0.5px; }
+.search-bar { flex: 1; min-width: 250px; display: flex; gap: 0; }
+.search-bar select { padding: 10px 12px; border: 1px solid #d1d5db; border-left: none; border-radius: 0 8px 8px 0; background: #fff; color: #1f2937; font-size: 13px; outline: none; cursor: pointer; min-width: 90px; font-family: 'Cairo', sans-serif; }
+.search-bar input { flex: 1; padding: 10px 16px; border: 1px solid #d1d5db; background: #fff; color: #1f2937; font-size: 14px; outline: none; }
+.search-bar input::placeholder { color: #9ca3af; }
+.search-bar button { background: #2563eb; color: #fff; border: none; padding: 10px 22px; cursor: pointer; font-weight: 700; font-size: 14px; border-radius: 8px 0 0 8px; transition: background 0.2s; font-family: 'Cairo', sans-serif; }
+.search-bar button:hover { background: #1d4ed8; }
+.btn-auth { background: #eab308; color: #000; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; transition: all 0.2s; font-family: 'Cairo', sans-serif; }
+.btn-auth:hover { background: #ca8a04; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, #1e3a8a, #2563eb, #1d4ed8); color: #fff; text-align: center; padding: 50px 20px 30px; }
+.hero h1 { font-size: 42px; margin-bottom: 8px; font-family: 'Cairo', sans-serif; font-weight: 800; }
+.hero h1 span { color: #fde047; }
+.hero .sub1 { font-size: 16px; opacity: 0.95; margin-bottom: 6px; }
+.hero .sub2 { font-size: 14px; color: #fde047; margin-bottom: 20px; font-weight: 600; }
+.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.hero-btns a { padding: 12px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-family: 'Cairo', sans-serif; transition: all 0.2s; }
+.hero-btns .primary { background: #eab308; color: #000; }
+.hero-btns .primary:hover { background: #ca8a04; transform: translateY(-1px); }
+.hero-btns .secondary { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+.hero-btns .secondary:hover { background: rgba(255,255,255,0.2); }
+
+/* Stats */
+.stats { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 14px 0; }
+.stats-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; }
+.stats-num { font-size: 26px; font-weight: 800; color: #2563eb; }
+.stats-label { font-size: 12px; color: #6b7280; }
+
+/* Section */
+.section { max-width: 1280px; margin: 0 auto; padding: 28px 20px; }
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.section-header h2 { font-size: 20px; font-weight: 700; color: #1f2937; display: flex; align-items: center; gap: 6px; }
+.section-header a { color: #2563eb; text-decoration: none; font-size: 13px; font-weight: 600; transition: color 0.2s; }
+.section-header a:hover { color: #1d4ed8; text-decoration: underline; }
+
+/* Categories */
+.cats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+.cat-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px 8px; text-align: center; text-decoration: none; color: #1f2937; transition: all 0.2s; }
+.cat-card:hover { border-color: #2563eb; box-shadow: 0 4px 12px rgba(37,99,235,0.1); transform: translateY(-2px); }
+.cat-icon { font-size: 30px; margin-bottom: 4px; }
+.cat-name { font-weight: 600; font-size: 12px; }
+
+/* Tags */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { background: #fff; border: 1px solid #e5e7eb; padding: 6px 16px; border-radius: 20px; font-size: 12px; text-decoration: none; color: #4b5563; transition: all 0.2s; }
+.tag:hover { background: #2563eb; color: #fff; border-color: #2563eb; }
+
+/* Ads Grid */
+.ads-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.ad-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; text-decoration: none; color: #1f2937; transition: all 0.25s; }
+.ad-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.ad-card.diamond { border-color: #7dd3fc; box-shadow: 0 0 0 2px #b9f2ff; }
+.ad-card.gold { border-color: #eab308; box-shadow: 0 0 0 2px #fde047; }
+.ad-card.silver { border-color: #c0c0c0; box-shadow: 0 0 0 1px #c0c0c0; }
+.ad-img { height: 170px; display: flex; align-items: center; justify-content: center; font-size: 44px; position: relative; }
+.ad-badge { position: absolute; top: 8px; right: 8px; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 4px; }
+.ad-badge.diamond { background: linear-gradient(135deg, #b9f2ff, #7dd3fc); color: #003344; }
+.ad-badge.gold { background: linear-gradient(135deg, #fde047, #eab308); color: #3a2a00; }
+.ad-badge.silver { background: linear-gradient(135deg, #e8e8e8, #c0c0c0); color: #333; }
+.ad-badge.paid { background: #ef4444; color: #fff; left: 8px; right: auto; }
+.ad-body { padding: 12px; }
+.ad-title { font-weight: 600; font-size: 13px; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.ad-price { font-size: 17px; font-weight: 700; color: #2563eb; margin-bottom: 4px; }
+.ad-meta { display: flex; justify-content: space-between; font-size: 11px; color: #9ca3af; }
+.ad-footer { display: flex; gap: 12px; padding: 8px 12px; border-top: 1px solid #f3f4f6; font-size: 11px; color: #9ca3af; }
+
+/* Detail */
+.detail-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; overflow-y: auto; padding: 20px; }
+.detail-overlay.open { display: block; }
+.detail-content { background: #fff; max-width: 750px; margin: 30px auto; border-radius: 16px; overflow: hidden; }
+.detail-img { height: 300px; display: flex; align-items: center; justify-content: center; font-size: 70px; position: relative; }
+.detail-body { padding: 24px; }
+.detail-body h2 { font-size: 22px; margin-bottom: 6px; }
+.detail-body .price { font-size: 26px; color: #2563eb; font-weight: 700; margin-bottom: 12px; }
+.detail-body .desc { color: #4b5563; line-height: 1.8; margin-bottom: 14px; font-size: 14px; }
+.detail-body .info { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 13px; margin-bottom: 16px; }
+.detail-close { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.5); color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; font-size: 20px; cursor: pointer; }
+.btn-contact { background: #2563eb; color: #fff; border: none; padding: 12px 32px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+.btn-contact:hover { background: #1d4ed8; }
+
+/* Ref links */
+.ref-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+.ref-link { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px 16px; text-decoration: none; color: #1f2937; display: flex; align-items: center; gap: 10px; transition: all 0.2s; font-size: 13px; }
+.ref-link:hover { border-color: #2563eb; transform: translateX(-3px); }
+
+/* Social */
+.social-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.social-link { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; text-decoration: none; font-weight: 700; transition: all 0.3s; }
+.social-link:hover { transform: scale(1.15); }
+
+/* CTA */
+.cta-section { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; text-align: center; padding: 40px 20px; }
+.cta-section h2 { font-size: 24px; margin-bottom: 8px; }
+.cta-section p { opacity: 0.9; margin-bottom: 16px; }
+.cta-section a { background: #eab308; color: #000; padding: 14px 40px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-block; transition: background 0.2s; }
+.cta-section a:hover { background: #ca8a04; }
+
+/* Footer */
+footer { background: #1f2937; color: #9ca3af; padding: 40px 20px 20px; }
+footer .inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; }
+footer h4 { color: #eab308; font-weight: 700; margin-bottom: 12px; font-size: 14px; }
+footer ul { list-style: none; }
+footer li { margin-bottom: 6px; }
+footer a { color: #9ca3af; text-decoration: none; font-size: 13px; transition: color 0.2s; }
+footer a:hover { color: #eab308; }
+footer .copy { text-align: center; margin-top: 28px; padding-top: 16px; border-top: 1px solid #374151; font-size: 12px; color: #6b7280; }
+
+/* QR */
+.qr-mini { display: flex; align-items: center; gap: 14px; background: #374151; padding: 12px 20px; border-radius: 10px; max-width: 320px; }
+.qr-box { width: 70px; height: 70px; background: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 8px; color: #333; font-family: monospace; border: 2px solid #eab308; flex-shrink: 0; }
+.qr-text { color: #9ca3af; font-size: 12px; }
+.qr-text strong { color: #eab308; font-size: 14px; }
+
+/* Subscribe */
+.sub-box { display: flex; gap: 6px; margin-top: 6px; }
+.sub-box input { flex: 1; padding: 8px 12px; border: 1px solid #4b5563; border-radius: 6px 0 0 6px; background: #374151; color: #fff; outline: none; font-size: 13px; }
+.sub-box input::placeholder { color: #6b7280; }
+.sub-box button { background: #eab308; color: #000; border: none; padding: 8px 16px; font-weight: 700; border-radius: 0 6px 6px 0; cursor: pointer; font-size: 13px; transition: background 0.2s; }
+.sub-box button:hover { background: #ca8a04; }
+
+/* Feedback */
+.fb-box textarea { width: 100%; padding: 10px; border: 1px solid #4b5563; border-radius: 8px; background: #374151; color: #fff; font-size: 13px; min-height: 60px; resize: vertical; outline: none; }
+.fb-box button { background: #eab308; color: #000; border: none; padding: 8px 24px; border-radius: 6px; font-weight: 700; cursor: pointer; margin-top: 6px; font-size: 13px; }
+
+/* Ad placeholder */
+.ad-ph { background: #f8f9fa; border: 1px dashed #d1d5db; border-radius: 8px; padding: 16px; text-align: center; color: #9ca3af; font-size: 12px; }
+
+/* Download section */
+.download-section { background: linear-gradient(135deg, #1e3a8a, #2563eb); border-radius: 16px; padding: 30px; text-align: center; color: #fff; margin: 0 20px; }
+.download-section h2 { font-family: 'Amiri', serif; font-size: 22px; margin-bottom: 8px; }
+.download-section p { margin-bottom: 16px; font-size: 14px; opacity: 0.9; }
+.download-badge { display: inline-flex; align-items: center; gap: 8px; background: #000; color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 4px; }
+.download-badge.gplay { background: #16a34a; }
+
+@media (max-width: 768px) {
+  .search-bar select { min-width: 65px; font-size: 11px; padding: 8px; }
+  .hero h1 { font-size: 28px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .cats-grid { grid-template-columns: repeat(3, 1fr); }
+  .ads-grid { grid-template-columns: 1fr; }
+  .header-inner { gap: 8px; }
+  .sub-box { flex-direction: column; }
+  .sub-box input { border-radius: 6px; }
+  .sub-box button { border-radius: 6px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo" onclick="showHome()">
+      سوق النعمان<span>.</span>
+      <small>nomansooq.com</small>
+    </a>
+    <div class="search-bar">
+      <select id="catFilter">
+        <option value="">كل الفئات</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="ابحث في سوق النعمان..." onkeyup="if(event.key==='Enter')searchAds()">
+      <button onclick="searchAds()">🔍 بحث</button>
+    </div>
+    <a href="#" class="btn-auth" onclick="event.preventDefault();alert('نموذج تسجيل الدخول قادم قريباً')">تسجيل الدخول أو إنشاء حساب</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>سوق النعمان <span>للإعلانات المبوبة</span> بكل ثقة وأمان</h1>
+  <p class="sub1">معنا تبيع وتشتري كل ما تحتاجه بكل سهولة وأمان لأن آلاف المستخدمين يثقون بنا</p>
+  <p class="sub2">📢 إعلانك معنا بالمجان — يصل إلى الملايين في كل مكان وبنفس الزمان</p>
+  <div class="hero-btns">
+    <a href="#" class="primary" onclick="event.preventDefault();document.getElementById('latest').scrollIntoView({behavior:'smooth'})">تصفح الإعلانات</a>
+    <a href="#" class="secondary" onclick="event.preventDefault();alert('نموذج إضافة إعلان قادم قريباً')">➕ أضف إعلانك مجاناً</a>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="stats-inner">
+    <div><div class="stats-num">+1M</div><div class="stats-label">إعلان منشور</div></div>
+    <div><div class="stats-num">+500K</div><div class="stats-label">مستخدم نشط</div></div>
+    <div><div class="stats-num">+50</div><div class="stats-label">تصنيف رئيسي</div></div>
+    <div><div class="stats-num">24/7</div><div class="stats-label">دعم فني</div></div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="section">
+  <div class="section-header">
+    <h2>📂 جميع التصنيفات</h2>
+    <a href="#" onclick="event.preventDefault();showAll()">عرض الكل ←</a>
+  </div>
+  <div class="cats-grid" id="categoriesGrid"></div>
+</section>
+
+<!-- Most Searched -->
+<section class="section" style="padding-top:0;">
+  <div class="section-header"><h2>🔍 الأكثر بحثاً</h2></div>
+  <div class="tags" id="mostSearched"></div>
+</section>
+
+<!-- Featured Ads -->
+<section class="section" style="background:#fff;margin:0;padding:28px 20px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="section-header"><h2>💎 الإعلانات المميزة</h2></div>
+    <div class="ads-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- Latest Ads -->
+<section class="section" id="latest">
+  <div class="section-header">
+    <h2 id="sectionTitle">📌 أحدث الإعلانات</h2>
+  </div>
+  <div class="ads-grid" id="adsGrid"></div>
+</section>
+
+<!-- Paid Ads -->
+<section class="section" style="padding-top:0;">
+  <div class="section-header"><h2>💰 إعلانات مدفوعة</h2></div>
+  <div class="ads-grid" id="paidGrid"></div>
+</section>
+
+<!-- Google Ads -->
+<section class="section" style="padding-top:0;">
+  <div class="ad-ph">📢 مساحة إعلانية — إعلانات Google هنا</div>
+</section>
+
+<!-- Download App -->
+<section class="download-section">
+  <h2>📱 حمل تطبيق سوق النعمان</h2>
+  <p>تسوق بكل سهولة من هاتفك — حمل التطبيق الآن</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <a href="#" class="download-badge" onclick="event.preventDefault();alert('رابط Apple Store قريباً')">
+      <span style="font-size:22px;">🍎</span> App Store
+    </a>
+    <a href="#" class="download-badge gplay" onclick="event.preventDefault();alert('رابط Google Play قريباً')">
+      <span style="font-size:22px;">▶️</span> Google Play
+    </a>
+  </div>
+</section>
+
+<!-- Referral Links -->
+<section class="section">
+  <div class="section-header"><h2>🔗 مواقع مشابهة</h2></div>
+  <div class="ref-links" id="refLinks"></div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-header"><h2>🔗 روابط مفيدة — روابط تهمك</h2></div>
+  <div class="ref-links" id="usefulLinks"></div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>هل لديك شيء للبيع أو تبحث عن خدمة؟</h2>
+  <p>انشر إعلانك مجاناً — أو اختر باقة مميزة لتصل إلى آلاف المشترين</p>
+  <a href="#" onclick="event.preventDefault();alert('نموذج إضافة إعلان قادم قريباً')">ابدأ الآن — مجاناً</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="inner">
+    <div>
+      <h4 style="font-size:20px;font-family:'Amiri',serif;">سوق النعمان</h4>
+      <p style="font-size:12px;line-height:1.8;color:#6b7280;">أول سوق إعلانات مبوبة في اليمن والعالم العربي. نوفر منصة آمنة وسهلة للبيع والشراء بكل ثقة وأمان.</p>
+      <p style="font-size:15px;font-weight:700;color:#eab308;margin:12px 0 6px;">سوق النعمان للإعلانات المبوبة</p>
+      <div class="social-links">
+        <a href="#" class="social-link" style="background:#1877f2;" onclick="event.preventDefault()">f</a>
+        <a href="#" class="social-link" style="background:#ff0000;" onclick="event.preventDefault()">▶</a>
+        <a href="#" class="social-link" style="background:#e4405f;" onclick="event.preventDefault()">◉</a>
+        <a href="#" class="social-link" style="background:#bd081c;" onclick="event.preventDefault()">P</a>
+        <a href="#" class="social-link" style="background:#0a66c2;" onclick="event.preventDefault()">in</a>
+      </div>
+    </div>
+    <div><h4>روابط سريعة</h4>
+      <ul><li><a href="#" onclick="showHome()">الرئيسية</a></li><li><a href="#" onclick="showAll()">جميع الإعلانات</a></li><li><a href="#" onclick="alert('قادم قريباً')">إضافة إعلان</a></li><li><a href="#" onclick="alert('قادم قريباً')">المساعدة والدعم</a></li></ul>
+    </div>
+    <div><h4>التصنيفات</h4><ul id="footerCats"></ul></div>
+    <div>
+      <h4>📧 النشرة البريدية</h4>
+      <p style="font-size:12px;color:#6b7280;margin-bottom:6px;">اشترك ليصلك كل جديد وعروض حصرية</p>
+      <div class="sub-box">
+        <input type="email" id="subEmail" placeholder="بريدك الإلكتروني">
+        <button onclick="var e=document.getElementById('subEmail');if(e.value){alert('✓ تم الاشتراك — شكراً لتواصلك مع سوق النعمان');e.value=''}else alert('الرجاء إدخال البريد الإلكتروني')">اشتراك</button>
+      </div>
+      <h4 style="margin-top:16px;">تواصل معنا</h4>
+      <ul><li>info@nomansooq.com</li><li>اليمن — صنعاء</li><li>دعم 24/7</li></ul>
+    </div>
+  </div>
+
+  <!-- QR + Feedback -->
+  <div style="max-width:1280px;margin:20px auto 0;display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+    <div class="qr-mini">
+      <div class="qr-box">
+        ⬛⬜⬛⬜<br>⬜⬛⬜⬛<br>⬛⬜⬛⬜<br>⬜⬛⬜⬛
+      </div>
+      <div class="qr-text">
+        <strong>سوق النعمان</strong><br>
+        nomansooq.com<br>
+        <span style="font-size:10px;">امسح للدخول إلى الموقع</span>
+      </div>
+    </div>
+
+    <div class="fb-box" style="flex:1;min-width:250px;max-width:400px;">
+      <h4 style="color:#eab308;font-size:13px;margin-bottom:6px;">💬 ملاحظاتك واقتراحاتك تهمنا</h4>
+      <div style="display:flex;gap:6px;">
+        <textarea id="feedbackText" placeholder="اكتب ملاحظاتك..."></textarea>
+        <button onclick="var fb=document.getElementById('feedbackText');if(fb.value.trim()){alert('✓ شكراً لتواصلك مع سوق النعمان — تم استلام ملاحظاتك');fb.value=''}else alert('الرجاء كتابة ملاحظاتك')">إرسال</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="copy">جميع الحقوق محفوظة © 2024 — سوق النعمان | nomansooq.com | صنعاء — اليمن</div>
+</footer>
+
+<!-- Detail Modal -->
+<div class="detail-overlay" id="detailModal">
+  <div class="detail-content">
+    <div class="detail-img" id="detailImg"><button class="detail-close" onclick="closeDetail()">✕</button></div>
+    <div class="detail-body" id="detailBody"></div>
+  </div>
+</div>
+
+<script>
+const categories = [
+  { id:1, name:'إلكترونيات', en:'Electronics', icon:'📱' },
+  { id:2, name:'السيارات', en:'Cars', icon:'🚗' },
+  { id:3, name:'العقارات', en:'Real Estate', icon:'🏠' },
+  { id:4, name:'الموضة والجمال', en:'Fashion', icon:'👗' },
+  { id:5, name:'الوظائف', en:'Jobs', icon:'💼' },
+  { id:6, name:'الخدمات العامة', en:'Services', icon:'🔧' },
+  { id:7, name:'الأثاث والديكور', en:'Furniture', icon:'🪑' },
+  { id:8, name:'الحيوانات', en:'Pets', icon:'🐾' },
+  { id:9, name:'الهوايات', en:'Hobbies', icon:'🎮' },
+  { id:10, name:'المستلزمات الطبية', en:'Medical', icon:'💊' },
+  { id:11, name:'علاقات عامة وتسويق', en:'PR & Marketing', icon:'📢' },
+  { id:12, name:'تصميم وتطوير', en:'Web & Apps', icon:'💻' },
+  { id:13, name:'جرافيك ومونتاج', en:'Design & Editing', icon:'🎨' },
+  { id:14, name:'ترجمة وبحوث', en:'Translation', icon:'📝' },
+];
+
+const ads = [
+  { id:1, cat:1, title:'آيفون 15 برو ماكس 256GB — جديد بالكرتون', desc:'جهاز آيفون 15 برو ماكس أحدث إصدار. بطارية ممتازة، كاميرا احترافية 48MP، مع ضمان رسمي لمدة عام. الجهاز بحالة الوكالة ولم يستخدم.', price:4899, currency:'ريال', city:'صنعاء', date:'2024-01-15', views:1250, pkg:'diamond', paid:true },
+  { id:2, cat:1, title:'MacBook Pro M3 14" — 18GB RAM — 512GB', desc:'لابتوب ماك بوك برو مع معالج M3 الجديد. شاشة ريتينا XDR، ذاكرة 18GB، تخزين 512GB SSD. مثالي للمبرمجين والمصممين.', price:7299, currency:'ريال', city:'عدن', date:'2024-01-14', views:890, pkg:'gold', paid:true },
+  { id:3, cat:2, title:'تويوتا كامري 2022 — فل كامل — صبغ وكالة', desc:'سيارة تويوتا كامري موديل 2022، لون أبيض، صبغ وكالة، قاطعة 45000 كم فقط. صيانة دورية. مكيفة، شاشة، كاميرا خلفية.', price:85000, currency:'ريال', city:'صنعاء', date:'2024-01-13', views:2300, pkg:'diamond', paid:true },
+  { id:4, cat:3, title:'شقة للبيع — 3 غرف — تشطيب فاخر', desc:'شقة فاخرة للبيع. مساحة 150م، 3 غرف نوم + صالة + 2 حمام + مطبخ. تشطيب فاخر، أرضيات باركيه، مكيفات اسبليت.', price:520000, currency:'ريال', city:'صنعاء', date:'2024-01-12', views:3450, pkg:'silver' },
+  { id:5, cat:1, title:'Samsung Galaxy S24 Ultra — شاشة 6.8 بوصة', desc:'هاتف سامسونج Galaxy S24 Ultra. شاشة 6.8 بوصة، كاميرا 200MP، قلم S Pen، بطارية 5000mAh. مع ضمان الوكيل.', price:4199, currency:'ريال', city:'عدن', date:'2024-01-11', views:1560, pkg:'gold', paid:true },
+  { id:6, cat:4, title:'فستان سهرة فاخر — مقاس M — تصميم إيطالي', desc:'فستان سهرة أنيق من تصميم إيطالي. لون عنابي، تطريز يدوي، قماش حريري عالي الجودة. مناسب للمناسبات الخاصة.', price:850, currency:'ريال', city:'تعز', date:'2024-01-10', views:420 },
+  { id:7, cat:2, title:'مرسيدس C300 2020 — أمريكي — 68000 كم', desc:'مرسيدس C300 موديل 2020، وارد أمريكا. فضي، 68000 كم، صبغ وكالة. شاشة كبيرة، فتحة سقف، كاميرات 360.', price:95000, currency:'ريال', city:'المكلا', date:'2024-01-09', views:1890 },
+  { id:8, cat:3, title:'فيلا للايجار — 5 غرف — مسبح وحديقة', desc:'فيلا مستقلة للإيجار. مساحة 400م، 5 غرف نوم، مجلس رجال، مجلس نساء، مسبح خاص، حديقة.', price:85000, currency:'ريال', city:'صنعاء', date:'2024-01-08', views:2100, pkg:'silver' },
+  { id:9, cat:5, title:'مطلوب مهندس برمجيات Senior — Python/Django', desc:'شركة تقنية كبرى تطلب مهندس برمجيات Senior. خبرة 5+ سنوات في Python/Django. راتب مجزي + تأمين طبي.', price:15000, currency:'ريال', city:'صنعاء', date:'2024-01-07', views:3200, paid:true },
+  { id:10, cat:6, title:'خدمات علاقات عامة وتسويق إلكتروني', desc:'فريق متخصص في العلاقات العامة والتسويق الإلكتروني. إدارة حملات إعلانية، تحسين محركات البحث SEO، إدارة وسائل التواصل.', price:2000, currency:'ريال', city:'عدن', date:'2024-01-06', views:670 },
+  { id:11, cat:13, title:'تصميم جرافيك — شعارات — هويات تجارية', desc:'مصمم جرافيك محترف. تصميم شعارات، هويات تجارية، بروشورات، بنرات إعلانية. خبرة 7 سنوات. أسعار تنافسية.', price:500, currency:'ريال', city:'تعز', date:'2024-01-05', views:540 },
+  { id:12, cat:14, title:'ترجمة معتمدة — إنجليزي عربي — بحوث جامعية', desc:'مترجم معتمد خبرة 10 سنوات. ترجمة أكاديمية، عقود، مستندات رسمية. دقة عالية وتسليم سريع.', price:300, currency:'ريال', city:'إب', date:'2024-01-04', views:1100 },
+  { id:13, cat:12, title:'تصميم موقع متكامل — HTML/CSS/React', desc:'مطور ويب خبرة 8 سنوات. تصميم مواقع احترافية. متجاوب مع كل الأجهزة. أسعار مناسبة.', price:1500, currency:'ريال', city:'صنعاء', date:'2024-01-03', views:890, paid:true },
+  { id:14, cat:6, title:'مونتاج فيديو — تصوير — موشن جرافيك', desc:'مونتير محترف خبرة 6 سنوات. مونتاج فيديو، تصوير، موشن جرافيك، إعلانات تجارية.', price:800, currency:'ريال', city:'الحديدة', date:'2024-01-02', views:430 },
+  { id:15, cat:9, title:'PlayStation 5 — يد إضافية — 3 ألعاب', desc:'جهاز بلايستيشن 5 بحالة ممتازة. يتضمن 3 ألعاب ويد تحكم إضافية.', price:2200, currency:'ريال', city:'صنعاء', date:'2024-01-01', views:1100, pkg:'silver' },
+];
+
+const mostSearched = ['آيفون','سامسونج','سيارة','شقة','فيلا','لابتوب','مهندس','تصميم','ترجمة','تسويق','مونتاج','PS5','غرفة نوم','كنب'];
+
+const refLinks = [
+  { name:'السوق المفتوح', url:'https://www.opensooq.com', icon:'🌐' },
+  { name:'أمازون', url:'https://www.amazon.com', icon:'📦' },
+  { name:'eBay', url:'https://www.ebay.com', icon:'🏷️' },
+  { name:'Bazarkoom', url:'https://www.bazarkoom.com', icon:'🛒' },
+  { name:'سوق العرب', url:'https://www.souq4arab.com', icon:'🌍' },
+  { name:'Etsy', url:'https://www.etsy.com', icon:'🎨' },
+];
+const usefulLinks = [
+  { name:'استعلامات حكومية', icon:'📋' }, { name:'الطقس في اليمن', icon:'🌤️' },
+  { name:'أسعار العملات', icon:'💰' }, { name:'دليل الأرقام', icon:'📞' },
+  { name:'الخدمات البريدية', icon:'✉️' }, { name:'أخبار التقنية', icon:'📰' },
+];
+
+function renderCategories() {
+  const grid = document.getElementById('categoriesGrid');
+  grid.innerHTML = categories.map(c => `<a href="#" class="cat-card" onclick="event.preventDefault();filterByCat(${c.id})"><div class="cat-icon">${c.icon}</div><div class="cat-name">${c.name}</div><div style="font-size:10px;color:#9ca3af;">${c.en}</div></a>`).join('');
+  document.getElementById('footerCats').innerHTML = categories.slice(0,8).map(c => `<li><a href="#" onclick="event.preventDefault();filterByCat(${c.id})">${c.name}</a></li>`).join('');
+  const sel = document.getElementById('catFilter');
+  sel.innerHTML = '<option value="">كل الفئات</option>' + categories.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
+}
+function renderMostSearched() {
+  document.getElementById('mostSearched').innerHTML = mostSearched.map(t => `<a href="#" class="tag" onclick="event.preventDefault();document.getElementById('searchInput').value='${t}';searchAds()">${t}</a>`).join('');
+}
+function renderRefLinks() {
+  document.getElementById('refLinks').innerHTML = refLinks.map(r => `<a href="${r.url}" target="_blank" class="ref-link"><span>${r.icon}</span> ${r.name}</a>`).join('');
+  document.getElementById('usefulLinks').innerHTML = usefulLinks.map(r => `<a href="#" class="ref-link" onclick="event.preventDefault()"><span>${r.icon}</span> ${r.name}</a>`).join('');
+}
+function pkgClass(pkg) { return pkg==='diamond'?'diamond':pkg==='gold'?'gold':pkg==='silver'?'silver':''; }
+function pkgBadge(pkg) { return pkg==='diamond'?'<span class="ad-badge diamond">💎 ماسي</span>':pkg==='gold'?'<span class="ad-badge gold">🥇 ذهبي</span>':pkg==='silver'?'<span class="ad-badge silver">🥈 فضي</span>':''; }
+function renderAds(list,id){
+  const g=document.getElementById(id); if(!g)return;
+  g.innerHTML=list.map(a=>`<a href="#" class="ad-card ${pkgClass(a.pkg)}" onclick="event.preventDefault();showDetail(${a.id})"><div class="ad-img" style="background:${bg(a.cat)}">${ic(a.cat)}${pkgBadge(a.pkg)}${a.paid?'<span class="ad-badge paid">💰 مدفوع</span>':''}</div><div class="ad-body"><div class="ad-title">${a.title}</div><div class="ad-price">${a.currency} ${a.price.toLocaleString()}</div><div class="ad-meta"><span>📍 ${a.city}</span><span>📅 ${a.date}</span></div></div><div class="ad-footer"><span>👁 ${a.views}</span><span>❤️ 0</span></div></a>`).join('');
+}
+function showDetail(id) {
+  const a=ads.find(x=>x.id===id); if(!a)return;
+  const m=document.getElementById('detailModal');
+  document.getElementById('detailImg').style.background=bg(a.cat);
+  document.getElementById('detailImg').innerHTML=`<button class="detail-close" onclick="closeDetail()">✕</button>${pkgBadge(a.pkg)}<span style="font-size:70px;">${ic(a.cat)}</span>`;
+  document.getElementById('detailBody').innerHTML=`<h2>${a.title}</h2><div class="price">${a.currency} ${a.price.toLocaleString()} ${a.paid?'<span style="font-size:12px;background:#ef4444;color:#fff;padding:2px 8px;border-radius:4px;margin-right:8px;">💰 مدفوع</span>':''}</div><div class="desc">${a.desc}</div><div class="info"><span class="info-label">📍 المدينة:</span><span class="info-val">${a.city} — اليمن</span><span class="info-label">📅 تاريخ النشر:</span><span class="info-val">${a.date}</span><span class="info-label">👁 المشاهدات:</span><span class="info-val">${a.views}</span><span class="info-label">📂 التصنيف:</span><span class="info-val">${cn(a.cat)}</span></div><button class="btn-contact" onclick="alert('📩 تم إرسال طلب التواصل إلى البائع')">📩 تواصل مع البائع</button>`;
+  m.classList.add('open');
+}
+function closeDetail(){document.getElementById('detailModal').classList.remove('open');}
+function filterByCat(c){
+  const f=ads.filter(a=>a.cat===c);
+  document.getElementById('sectionTitle').textContent='📂 '+cn(c);
+  renderAds(f,'adsGrid');
+  document.getElementById('featuredGrid').innerHTML='';
+  document.getElementById('paidGrid').innerHTML='';
+  document.getElementById('latest').scrollIntoView({behavior:'smooth'});
+}
+function showAll(){
+  document.getElementById('sectionTitle').textContent='📌 أحدث الإعلانات';
+  renderAds(ads,'adsGrid');
+  renderAds(ads.filter(a=>a.pkg),'featuredGrid');
+  renderAds(ads.filter(a=>a.paid),'paidGrid');
+}
+function searchAds(){
+  const q=document.getElementById('searchInput').value.trim().toLowerCase();
+  const c=document.getElementById('catFilter').value;
+  let f=ads; if(q)f=f.filter(a=>a.title.includes(q)||a.desc.includes(q)||a.city.includes(q));
+  if(c)f=f.filter(a=>a.cat===parseInt(c));
+  document.getElementById('sectionTitle').textContent=q?'🔍 نتائج البحث عن "'+q+'"':(c?'📂 '+cn(parseInt(c)):'📌 أحدث الإعلانات');
+  renderAds(f,'adsGrid');
+  document.getElementById('featuredGrid').innerHTML='';
+  document.getElementById('paidGrid').innerHTML='';
+}
+function showHome(){
+  document.getElementById('sectionTitle').textContent='📌 أحدث الإعلانات';
+  renderAds(ads,'adsGrid');
+  renderAds(ads.filter(a=>a.pkg),'featuredGrid');
+  renderAds(ads.filter(a=>a.paid),'paidGrid');
+  document.getElementById('searchInput').value='';
+  document.getElementById('catFilter').value='';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+const icons=categories.map(c=>c.icon),names=categories.map(c=>c.name);
+const colors=['#dbeafe','#fef3c7','#d1fae5','#fce7f3','#e0e7ff','#fef3c7','#f3e8ff','#d1fae5','#fce7f3','#dbeafe','#fef9c3','#e0e7ff','#f3e8ff','#d1fae5'];
+function ic(i){return icons[i-1]||'📦';} function cn(i){return names[i-1]||'أخرى';} function bg(i){return colors[i-1]||'#f3f4f6';}
+
+renderCategories(); renderMostSearched(); renderRefLinks();
+renderAds(ads,'adsGrid');
+renderAds(ads.filter(a=>a.pkg),'featuredGrid');
+renderAds(ads.filter(a=>a.paid),'paidGrid');
+document.addEventListener('click',function(e){if(e.target.classList.contains('detail-overlay'))closeDetail();});
+</script>
+</body>
+</html>
